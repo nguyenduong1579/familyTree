@@ -22,7 +22,7 @@ var secondgen = [
     {
         name: "Prince Philip",
         parent: [" "],
-        childof: ["King Georger VI","Queen Elizabeth"],
+        childof: ["King Georger VI & Queen Elizabeth"],
         childOf: function () {
             return this.childof.map(parent => secondgen[0].childof).join(' & ') || "unknown"
           }
@@ -30,7 +30,7 @@ var secondgen = [
     {
         name: "Queen Elizabeth II",
         parent: [" "],
-        childof: ["King Georger VI","Queen Elizabeth"],
+        childof: ["King Georger VI & Queen Elizabeth"],
         childOf: function () {
             return this.childof.map(parent => secondgen[1].childof).join(' & ') || "unknown"
           }
