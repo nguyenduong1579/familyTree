@@ -1,46 +1,90 @@
-var first = [
+var firstgen = [
     {
-        const: ["King Georger VI","Queen Elizabeth"],
+        name: "King Georger VI",
+        paren: ["Price Phillip","Queen Elizabeth II","Prince Margaret"],
+        ChildOf: "",
+        childOf: function (){ 
+            return this.childof;
+        }
+    },
+
+    {
+        name: "Queen Elizabeth",
+        paren: ["Price Phillip","Queen Elizabeth II","Prince Margaret"],
+        childOf: "",
+        childOf: function (){ 
+            return this.childof;
+        }
     }
 ]
+
 var secondgen = [
     {
-        const : ["Price Phillip","Queen Elizabeth II"],
-        childOf: first[0],
+        name: "Prince Philip",
+        parent: [" "],
+        childof: ["King Georger VI","Queen Elizabeth"],
+        childOf: function (){ 
+            return this.childof;
+        }
     },
     {
-        const : ["Prince Margaret"],
-        childOf: first[0],
-    },
+        name: "Queen Elizabeth II",
+        parent: [" "],
+        childof: ["King Georger VI","Queen Elizabeth"],
+        childOf: function (){ 
+            return this.childof;
+        }
+    }
 ]
+
 var thirdgen = [
     {
-        const: ["camila"],
-        childOf: secondgen[0]
+        name: "camila",
+        parent: [" "],
+        childof: ["Prince Philip","Queen Elizabeth II"],
+        childOf: function (){ 
+            return this.childof;
+        }
     },
     {
-        const: ["Charles"],
-        childOf: secondgen[0]
+        name: "Charles",
+        parent: [" "],
+        childof: ["Prince Philip","Queen Elizabeth II"],
+        childOf: function (){ 
+            return this.childof;
+        }
     },
     {
-        const: ["Diana"],
-        childOf: secondgen[0]
+        name: "Diana",
+        parent: [" "],
+        childof: ["Prince Philip","Queen Elizabeth II"],
+        childOf: function (){ 
+            return this.childof;
+        }
     },
     {
-        const: ["Anne"],
-        childOf: secondgen[0]
+        name: "Anne",
+        parent: [" "],
+        childof: ["Prince Philip","Queen Elizabeth II"],
+        childOf: function (){ 
+            return this.childof;
+        }
     },
     {
-        const: ["Prince Andrew"],
-        childOf: secondgen[0]
+        name: "Prince Andrew",
+        parent: [" "],
+        childof: ["Prince Philip","Queen Elizabeth II"],
+        childOf: function (){ 
+            return this.childof;
+        }
     },
     {
-        const: ["Prince Edward"],
-        childOf: secondgen[0]
+        name: "Prince Edward",
+        parent: [" "],
+        childof: ["Prince Philip","Queen Elizabeth II"],
+        childOf: function (){ 
+            return this.childof;
+        }
     },
-
 ]
-console.log(thirdgen[5].childOf.const);
-
-
-
+  console.log(thirdgen[0].childOf())
